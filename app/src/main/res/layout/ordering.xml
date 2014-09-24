@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#00ffffff">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+>
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVOne"
+            android:src="@drawable/one"
+            android:layout_weight="1"
+
+            android:background="#00ffffff" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVTwo"
+            android:src="@drawable/two"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVThree"
+            android:src="@drawable/three"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVFour"
+            android:src="@drawable/four"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVFive"
+            android:src="@drawable/five"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/FirstButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:text="1"
+ />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/SecondButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:text="2"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/ThirdButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:text="3"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/ForthButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:text="4"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/FiveButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"
+            android:text="5"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ResultTextView"
+        android:textSize="25sp"
+        android:paddingBottom="15dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:paddingBottom="5dp"
+
+>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/IVOneDrag"
+
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/IVTwoDrag"
+
+        android:layout_weight="1"
+        />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVThreeDrag"
+
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVFourDrag"
+
+            android:layout_weight="1"
+         />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/IVFiveDrag"
+
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/InstructionTextView"
+        android:layout_weight="0.20"
+        android:textSize="25sp"
+        android:paddingTop="10dp"
+        />
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/readybutton"
+        android:id="@+id/CheckButton"
+        android:layout_weight="0.10"
+        android:textSize="25sp"
+        android:onClick="checkOnClick"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="75dp" />
+
+</LinearLayout>
