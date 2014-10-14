@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/part2back"
+    android:clickable="false"
+    android:clipChildren="false">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click for Hint"
+        android:id="@+id/Hint2nd2Button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SecondlevelsecondReadyButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:longClickable="false"
+        android:background="@drawable/readybutton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/Second2DescriptionTextView"
+        android:layout_above="@+id/SecondlevelsecondReadyButton"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/HeadingSecond2TextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/PanelImageButton"
+        android:src="@drawable/panel"
+
+        android:layout_above="@+id/PoleImageView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PoleImageView"
+        android:src="@drawable/polee"
+
+        android:layout_above="@+id/Second2DescriptionTextView"
+        android:layout_toEndOf="@+id/UpImageButton"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/DownImageButton"
+        android:src="@drawable/downarrowoff"
+        android:layout_alignBottom="@+id/PoleImageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/Second2DescriptionTextView"
+        android:layout_marginLeft="0dp"
+        android:background="#C2B280" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/UpImageButton"
+        android:src="@drawable/uparrowoff"
+        android:layout_alignBottom="@+id/PoleImageView"
+
+        android:layout_marginLeft="100dp"
+        android:background="#C2B280" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/RotateImageButton"
+        android:layout_alignBottom="@+id/PoleImageView"
+
+
+        android:layout_marginLeft="45dp"
+        android:src="@drawable/rotatearrow"
+        android:background="#C2B280" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Angle: 0.0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/AngleTextView"
+        android:layout_alignLeft="@+id/OrientationTextView"
+
+        android:layout_alignBottom="@+id/UpImageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#FF0000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orientation:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/OrientationTextView"
+        android:layout_toEndOf="@+id/UpImageButton"
+        android:layout_above="@+id/AngleTextView"
+        android:layout_alignLeft="@+id/SecondlevelsecondReadyButton"
+        android:layout_alignStart="@+id/SecondlevelsecondReadyButton" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/CompassImageView"
+android:layout_alignRight="@+id/OrientationTextView"
+        android:layout_alignBottom="@+id/OrientationTextView"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/compass"
+        android:background="@drawable/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HintSecond2TextView"
+        android:layout_below="@+id/HeadingSecond2TextView"
+
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FFFF00"/>
+
+
+</RelativeLayout>

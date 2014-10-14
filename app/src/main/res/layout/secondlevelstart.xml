@@ -5,41 +5,42 @@
     android:background="@drawable/background0">
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/criticalMonthButton"
         android:background="@drawable/task2current"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-
-        android:layout_marginTop="10dp"/>
+        android:layout_alignLeft="@+id/sizeControllerButton"
+        android:layout_alignStart="@+id/sizeControllerButton" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/sizeBatteryButton"
         android:background="@drawable/task2"
-        android:layout_marginTop="10dp"
-        android:layout_alignRight="@+id/criticalMonthButton"
-        android:layout_alignParentRight="true"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sizeControllerButton"
+        android:layout_alignLeft="@+id/sizeControllerButton"
+        android:layout_alignStart="@+id/sizeControllerButton" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/sizePVArrayButton"
         android:background="@drawable/task3"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/sizeBatteryButton"
-
-        android:layout_marginTop="56dp" />
+        android:layout_alignLeft="@+id/sizeBatteryButton"
+        android:layout_alignStart="@+id/sizeBatteryButton" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/sizeControllerButton"
         android:background="@drawable/task4"
-        android:layout_alignTop="@+id/sizePVArrayButton"
-android:layout_alignRight="@+id/sizePVArrayButton"
-        android:layout_alignParentRight="true"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/criticalMonthButton"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -48,20 +49,20 @@ android:layout_alignRight="@+id/sizePVArrayButton"
         android:id="@+id/ResultTextView"
 
 
-        android:textSize="25sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_below="@+id/sizePVArrayButton"
-        android:paddingTop="20dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textStyle="bold" />
+        android:layout_above="@+id/readyButton3"
+        android:layout_alignRight="@+id/readyButton3"
+        android:layout_alignEnd="@+id/readyButton3"
+  />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/readyButton3"
         android:background="@drawable/readybutton"
-        android:layout_below="@+id/ResultTextView"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="64dp" />
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

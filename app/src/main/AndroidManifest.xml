@@ -24,6 +24,7 @@
         <activity android:name=".SecondLevelStart"/>
         <activity android:name=".SecondLevelSecond"/>
         <activity android:name=".SecondLevel"/>
+        <activity android:name=".SecondFourth"/>
 
     </application>
 

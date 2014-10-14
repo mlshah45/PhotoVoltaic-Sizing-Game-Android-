@@ -2,6 +2,7 @@ package com.sizing.manthan.sizing;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -124,8 +125,9 @@ public class SecondLevel extends Activity {
             if (buttonpressed[1]) {
                 winterButton.setBackgroundResource(R.drawable.gwinter);
                 hintTextView.setText("Congratulations! you selected the season that contains the critical design month.");
-
-                LayoutInflater inflater = getLayoutInflater();
+                Intent startSecond2 = new Intent(SecondLevel.this,SecondFourth.class);
+                startActivity(startSecond2);
+              /*  LayoutInflater inflater = getLayoutInflater();
                 View toastView = inflater.inflate(R.layout.toastview,
                         (ViewGroup) findViewById(R.id.toastLayout));
                 TextView toastTV = (TextView) toastView.findViewById(R.id.ToastTextView);
@@ -133,6 +135,7 @@ public class SecondLevel extends Activity {
                 Toast toast = new Toast(SecondLevel.this);
                 toast.setView(toastView);
                 toast.show();
+                */
 
             } else if (buttonpressed[0]) {
                 springButton.setBackgroundResource(R.drawable.rspring); //making background red color to indicate wrong button select
