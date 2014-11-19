@@ -18,6 +18,7 @@ import java.util.Arrays;
 
 /**
  * Created by Manthan on 9/22/2014.
+ * Activity which asks users to select weather
  */
 public class SecondLevel extends Activity {
     TextView hintTextView;
@@ -63,6 +64,7 @@ public class SecondLevel extends Activity {
 
     }
 
+    //based on which weather  is clicked changes the earth position and color of the button
     protected View.OnClickListener ButtonListner = new View.OnClickListener() {
 
         public void onClick(View view) {
@@ -103,6 +105,7 @@ public class SecondLevel extends Activity {
         }
     };
 
+
     private void setOtherToOriginalImage(int i) {
         if (i != 0) {
             springButton.setBackgroundResource(R.drawable.bspring);
@@ -118,7 +121,7 @@ public class SecondLevel extends Activity {
         }
     }
 
-
+//check whether button clicked was correct
     private View.OnClickListener readyButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

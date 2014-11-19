@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 /**
  * Created by Manthan on 9/5/2014.
+ * This is the second activity after the Main
  */
 public class Welcome extends Activity {
 

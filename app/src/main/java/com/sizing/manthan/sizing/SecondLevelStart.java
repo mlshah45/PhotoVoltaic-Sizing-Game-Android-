@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 /**
  * Created by Manthan on 9/22/2014.
+ * Displays the list of levels that needs to be cleared
  */
 public class SecondLevelStart extends Activity {
     TextView result;

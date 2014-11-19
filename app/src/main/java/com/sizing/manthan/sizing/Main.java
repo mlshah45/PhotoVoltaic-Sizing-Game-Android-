@@ -12,11 +12,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+//First Activity that open up on starting the application.
 public class Main extends Activity {
 
     EditText usernameEditText;
-
+// asks for username from the user and directs to another page on clicking submit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

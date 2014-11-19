@@ -69,6 +69,8 @@ public class Ordering extends Activity implements View.OnTouchListener {
         Random rng = new Random();
         selected = new ArrayList<String>();
         generated = new ArrayList<Integer>();
+
+        //Random image views generator
         for (int i = 0; i < 5; i++) {
             while (true) {
                 Integer next = rng.nextInt(5);
@@ -133,15 +135,17 @@ public class Ordering extends Activity implements View.OnTouchListener {
         int indecOfCorrect = -1;
         Arrays.fill(isCorrectPosition, false);
 
+        //checking if the tapped image is in correct position
         if (IVFive.getTag() != null && IVFive.getTag().toString().equals("FiveDrag")) {
             IVFive.setBackgroundColor(0xFF00FF00);  //setting green background
             isCorrectPosition[4] = true;
         } else {
+            //if tapped image in wring position
             IVFive.setImageResource(R.drawable.five);
             selected.remove(IVFive.getTag().toString());
             IVFive.setTag("Five");
             flag = false;
-            IVFive.setBackgroundColor(0xFFFF0000);
+            IVFive.setBackgroundColor(0xFFFF0000);  //setting red background
         }
 
 
@@ -216,7 +220,7 @@ public class Ordering extends Activity implements View.OnTouchListener {
             }
         }
 
-        //if all items are in right order
+        //if all items are in right order then proceed to next level
         if (flag) {
             endTime = System.currentTimeMillis();
             int totalTimeUsed = (int) ((endTime - startTime) / 1000);
@@ -246,6 +250,7 @@ public class Ordering extends Activity implements View.OnTouchListener {
         }
     }
 
+    //getting the image id which is tapped
     private int getImageId(int draggedViewId) {
         if (draggedViewId == R.id.IVFiveDrag)
             return imageResources[generated.get(4)];
@@ -260,6 +265,7 @@ public class Ordering extends Activity implements View.OnTouchListener {
         return 0;
     }
 
+    //onn touch calls gesturedetector which detects double tap
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
 
@@ -268,6 +274,8 @@ public class Ordering extends Activity implements View.OnTouchListener {
     }
 
     private class GestureListener extends SimpleOnGestureListener {
+
+        //removes image on upper strap on touch and displays info when ouched on lower tap
         @Override
         public boolean onDown(MotionEvent motionEvent) {
             String tag;
@@ -335,6 +343,7 @@ public class Ordering extends Activity implements View.OnTouchListener {
             return false;
         }
 
+        //listens to double tap and copies image above based on the available space
         @Override
         public boolean onDoubleTap(MotionEvent e) {
 
@@ -367,6 +376,8 @@ public class Ordering extends Activity implements View.OnTouchListener {
         }
     }
 
+
+    //Whichever image is double tapped is copied above
     private void copyImageAbove() {
         if (IVOne.getTag().toString().equals("One")) {
             IVOne.setImageResource(getImageId(viewtapped.getId()));

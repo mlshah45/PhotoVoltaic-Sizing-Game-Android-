@@ -11,6 +11,8 @@ import org.w3c.dom.Text;
 
 /**
  * Created by Manthan on 9/17/2014.
+ * Activity that shows up after clearing the first level
+ * it displays time taken and hints used by user in first level
  */
 public class FirstLevelClear extends Activity {
 

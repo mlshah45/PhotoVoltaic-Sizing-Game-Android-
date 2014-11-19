@@ -18,6 +18,7 @@ import org.w3c.dom.Text;
 
 /**
  * Created by Manthan on 10/12/2014.
+ * This is last activity which is based on rotation of the PV array panel
  */
 public class SecondFourth extends Activity {
     ImageView panelIB,poleIV,compassIV;
@@ -44,21 +45,24 @@ public class SecondFourth extends Activity {
         hintButton.setOnClickListener(hintButtonListerner);
         Button readyButton = (Button) findViewById(R.id.SecondlevelsecondReadyButton);
         readyButton.setOnClickListener(readyButtonListener);
+
         panelIB = (ImageView) findViewById(R.id.PanelImageButton);
         AngelTV = (TextView) findViewById(R.id.AngleTextView);
         poleIV= (ImageView) findViewById(R.id.PoleImageView);
         compassIV= (ImageView) findViewById(R.id.CompassImageView);
         compassIV.setImageResource(R.drawable.compassrotated);
-first =true;
-        clockY=true;
-        anticlockY=true;
-        rotated=false;
+
+        first =true;
+        clockY=true;  // y position of the panel when clockwise
+        anticlockY=true;//y position of the panel when anticlockwise
+        rotated=false; //whether rotated then it is anticlockwise and if not then it is clockwise
         clock=0.0f;
         anticlock=180.0f;
 
         String hint1 = "In the Southern Hemisphere point the PV Array towars true North and in the Northern Hemisphere towards true South";
         String hint2 = "Best tilt angle for all year is latitude plus 15 degrees";
         hints = new String[]{hint1, hint2};
+
 
         downArrowIB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,12 +100,14 @@ first =true;
             }
         });
 
+        //based on ratation button switches, functions are called
         rotateArrowIB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(rotated)
                 {
-
+//if anticlockwise then switch to clockwise
                     compassIV.setImageResource(R.drawable.compassrotated);
                     panelIB.setImageResource(R.drawable.panel);
                     View PanelButton = findViewById(R.id.PanelImageButton);
@@ -115,12 +121,12 @@ first =true;
                     Matrix matrix=new Matrix();
 
                         panelIB.setScaleType(ImageView.ScaleType.MATRIX);   //required
-                    clock=180-anticlock;
+                    clock=180-anticlock; //to maintian the degree on rotation
                         clockwise(clock);
                 }
                 else
                 {
-
+//if clockwise then switch to anticlockwise
                     compassIV.setImageResource(R.drawable.compass);
                     rotated=true;
                     panelIB.setImageResource(R.drawable.panelrotated);
@@ -145,6 +151,7 @@ first =true;
         });
     }
 
+    //whenever the position is clockwise this function is called
     private void anticlockwise(float x) {
         Matrix matrix=new Matrix();
         panelIB.setScaleType(ImageView.ScaleType.MATRIX);   //required
@@ -161,6 +168,8 @@ first =true;
         AngelTV.setText("Angle: " + (180-x));
     }
 
+
+    //whenever the position is clockwise this function is called
     private void clockwise(float x) {
 
         Matrix matrix=new Matrix();
@@ -189,6 +198,7 @@ first =true;
         }
     };
 
+    //checks whether the position of the panel is correct and performs action accordingly
     private View.OnClickListener readyButtonListener= new View.OnClickListener() {
         @Override
         public void onClick(View view) {
