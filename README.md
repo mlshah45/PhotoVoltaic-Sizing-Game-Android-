@@ -1,11 +1,8 @@
 PhotoVoltaic-Sizing-Game
 ========================
 
-1) A native interactive PV System sizing game android application.
+A native interactive PhotoVoltaic System sizing android game application.
+An educational project which helps people via an android game, to learn about the photo voltaic systems which assists to store solar energy.
 
-2) It is built using Android Studio IDE. So, if you want to use Eclipse for this project, there are steps available on net 
-to convert into an eclipse project.
-
-3) This has two levels till now, with second level sub divided into further levels.
-
-Thank you!
+It consists of two levels with second level sub divided into further levels.
+There is a rating on completion of each level which based on time spent and hints used in that level.
